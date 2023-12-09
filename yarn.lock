@@ -26,6 +26,7 @@
   dependencies:
     "@chainsafe/as-sha256" "^0.3.1"
 
+
 "@chainsafe/ssz@^0.10.0":
   version "0.10.2"
   resolved "https://registry.yarnpkg.com/@chainsafe/ssz/-/ssz-0.10.2.tgz#c782929e1bb25fec66ba72e75934b31fd087579e"
