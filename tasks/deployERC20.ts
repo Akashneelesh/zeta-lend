@@ -19,7 +19,7 @@ const main = async (args: any, hre: HardhatRuntimeEnvironment) => {
 
   const systemContract = getAddress("systemContract", "zeta_testnet");
 
-  const factory = await hre.ethers.getContractFactory("LendingPool");
+  const factory = await hre.ethers.getContractFactory("Staking");
 
   let symbol, chainID;
   if (args.chain === "btc_testnet") {
@@ -35,13 +35,9 @@ const main = async (args: any, hre: HardhatRuntimeEnvironment) => {
     }
   }
 
-  const tokenName = "ETH";
-  const tokenSymbol = "ETH";
-  const decimals = 18;
-
   const contract = await factory.deploy(
-    tokenName,
-    tokenSymbol,
+    `Staking rewards for ${symbol}`,
+    `R${symbol.toUpperCase()}`,
     chainID,
     systemContract
   );
