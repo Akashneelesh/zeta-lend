@@ -1,3 +1,5 @@
+import "./tasks/interact";
+import "./tasks/deploy";
 import "@nomicfoundation/hardhat-toolbox";
 import "@zetachain/toolkit/tasks";
 
@@ -10,4 +12,5 @@ const config: HardhatUserConfig = {
   },
   solidity: "0.8.7",
 };
+
 export default config;
